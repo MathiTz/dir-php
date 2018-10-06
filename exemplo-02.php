@@ -16,6 +16,10 @@ foreach ($images as $img)
 
         $info["size"] = filesize($filename);
 
+        $info["modified"] = date("d/m/Y H:i:s", filemtime($filename));
+
+        $info["url"] = "http://localhost/php_estudos/curso_hcode/dir/".$filename;
+
         array_push($data, $info);
     }
 }
