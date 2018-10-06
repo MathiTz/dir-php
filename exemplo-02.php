@@ -18,7 +18,7 @@ foreach ($images as $img)
 
         $info["modified"] = date("d/m/Y H:i:s", filemtime($filename));
 
-        $info["url"] = "http://localhost/php_estudos/curso_hcode/dir/".$filename;
+        $info["url"] = "http://localhost/php_estudos/curso_hcode/dir/".srt_replace("\\", "/", $filename);
 
         array_push($data, $info);
     }
